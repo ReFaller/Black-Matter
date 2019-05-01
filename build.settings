@@ -1,0 +1,66 @@
+settings =
+{
+	orientation =
+	{
+		-- Supported values for orientation:
+		-- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+		default = "landscapeRight",
+		supported = { "landscapeRight", },
+	},
+
+    window =
+   {
+      defaultMode = "normal",
+      defaultViewWidth = 800,
+      defaultViewHeight = 600,
+      titleText = {
+        default = "Blast Racers"
+      }
+  },
+
+	--
+	-- Android section
+	--
+	android =
+	{
+		usesPermissions =
+		{
+			"android.permission.INTERNET",
+			"android.permission.ACCESS_NETWORK_STATE",
+			"android.permission.WRITE_EXTERNAL_STORAGE",
+		},
+	},
+
+	--
+	-- iOS section
+	--
+	iphone =
+	{
+		xcassets = "Images.xcassets",
+		plist =
+		{
+			CFBundleIconFiles = {},
+		    NSAppTransportSecurity = { NSAllowsArbitraryLoads=true },
+			UILaunchStoryboardName = "LaunchScreen",
+			UIStatusBarHidden = true,
+			CFBundleDisplayName = "Cron's Cannon",
+            CFBundleName = "Cron's Cannon",
+		},
+	},
+
+	--
+	-- Plugins section
+	--
+    plugins =
+    {
+		},
+	--
+	-- Project section
+	--
+	excludeFiles =
+	{
+		-- Exclude unnecessary files for each platform
+		all = { "Icon.png", "Icon-*dpi.png", "Images.xcassets", },
+		android = { "LaunchScreen.storyboardc", },
+	},
+}
